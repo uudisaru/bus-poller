@@ -1,3 +1,5 @@
+![Docker Image CI](https://github.com/uudisaru/bus-poller/workflows/Docker%20Image%20CI/badge.svg)
+
 # Bus location poller
 
 The service polls bus locations of Tallinn, Estonia and publishes the information to Redis pub/sub channel.
