@@ -15,8 +15,8 @@ jobs:
     - name: Login to DockerHub
       run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
     - name: Build and tag the Docker image
-      run: docker build . --file Dockerfile --tag trtd/bus-poller:${{ GITHUB_RUN_NUMBER }} --tag trtd/bus-poller:latest
+      run: docker build . --file Dockerfile --tag trtd/bus-poller:${GITHUB_RUN_NUMBER} --tag trtd/bus-poller:latest
     - name: Push the image with version number
-      run: docker push bus-poller:${{ GITHUB_RUN_NUMBER }}
+      run: docker push bus-poller:${GITHUB_RUN_NUMBER}
     - name: Push the latest image
       run: docker push bus-poller:tag
