@@ -3,7 +3,7 @@
 # Bus location poller
 
 The service polls bus locations of Tallinn, Estonia and publishes the information to Redis pub/sub channel.
-The service is a part of Docker demo - see (bus-app)[https://github.com/uudisaru/bus-app] for complete application.
+The service is a part of Docker demo - see [bus-app](https://github.com/uudisaru/bus-app) for complete application.
 
 # Build commands
 
