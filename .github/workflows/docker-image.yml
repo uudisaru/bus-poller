@@ -17,8 +17,8 @@ jobs:
     - name: Get the version
       run: echo ::set-output name=tag::$(echo date +%s)
     - name: Build and tag the Docker image
-      run: docker build . --file Dockerfile --tag trtd/bus-poller:${{steps.vars.outputs.tag}} --tag trtd/bus-poller:latest
+      run: docker build . --file Dockerfile --tag bus-poller:${{steps.vars.outputs.tag}} --tag bus-poller:latest
     - name: Push the image with version number
-      run: docker push trtd/bus-poller:${{steps.vars.outputs.tag}}
+      run: docker push bus-poller:${{steps.vars.outputs.tag}}
     - name: Push the latest image
-      run: docker push trtd/bus-poller:tag
+      run: docker push bus-poller:tag
