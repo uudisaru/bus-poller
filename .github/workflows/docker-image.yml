@@ -19,4 +19,4 @@ jobs:
     - name: Push the image with version number
       run: docker push trtd/bus-poller:${GITHUB_RUN_NUMBER}
     - name: Push the latest image
-      run: docker push bus-poller:tag
+      run: docker push trtd/bus-poller:latest
