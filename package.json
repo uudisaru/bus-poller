@@ -2,7 +2,7 @@
   "name": "node-ts-starter",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Horus Lugo",
+  "author": "Toomas Uudisaru",
   "license": "MIT",
   "scripts": {
     "dev": "tsnd --respawn -r @babel/register src/index.ts",
@@ -33,6 +33,7 @@
     "@types/ioredis": "^4.17.2",
     "@types/node": "^13.7.1",
     "@types/node-cron": "^2.0.3",
+    "@types/regenerator-runtime": "^0.13.0",
     "@typescript-eslint/eslint-plugin": "^2.19.2",
     "@typescript-eslint/parser": "^2.19.2",
     "babel-jest": "^26.1.0",

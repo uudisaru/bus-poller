@@ -1,4 +1,4 @@
-import {RedisOptions} from "ioredis";
+import { RedisOptions } from "ioredis";
 
 export const API_TALLINN_BUS_POSITIONS =
   process.env.API_TALLINN_BUS_POSITIONS ||

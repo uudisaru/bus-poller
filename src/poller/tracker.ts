@@ -30,7 +30,7 @@ export class Tracker {
     this.tracks = new Map();
   }
 
-  public update = (data: string) => {
+  public update(data: string) {
     const locations = this.parser(data);
     const changes: PositionUpdate[] = [];
     for (const location of locations) {
@@ -45,9 +45,9 @@ export class Tracker {
     }
 
     return changes;
-  };
+  }
 
-  private coordsEqual = (a: Coords, b: Coords) => {
+  private coordsEqual(a: Coords, b: Coords) {
     return a[0] === b[0] && a[0] === b[0];
   };
 }

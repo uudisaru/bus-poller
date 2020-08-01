@@ -1,6 +1,7 @@
 import axios from "axios";
 import { API_TALLINN_BUS_POSITIONS } from "../settings";
 import { PositionUpdate, Tracker } from "./tracker";
+import "regenerator-runtime/runtime";
 
 export async function poll() {
   try {

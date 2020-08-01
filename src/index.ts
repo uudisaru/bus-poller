@@ -7,14 +7,10 @@ function main(): void {
   const redis = new RedisConnection();
   redis.connect();
 
-  try {
-    cron.schedule("*/5 * * * * *", async () => {
-      const updates = await poller.poll();
-      updates.forEach(update => redis.send(JSON.stringify(update)));
-    });
-  } finally {
-    redis.disconnect();
-  }
+  cron.schedule("*/5 * * * * *", async () => {
+    const updates = await poller.poll();
+    updates.forEach(update => redis.send(JSON.stringify(update)));
+  });
 }
 
 main();
